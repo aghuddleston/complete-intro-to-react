@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = {
+const config = {
   context: __dirname,
   entry: "./js/ClientApp.jsx",
   devtool: "cheap-eval-source-map",
@@ -36,3 +36,11 @@ module.exports = {
     ]
   }
 }
+
+if (process.env.NODE_ENV === 'production') {
+  config.entry = './js/ClientApp.jsx'
+  config.devtool = false
+  config.plugins = []
+}
+
+module.exports = config
