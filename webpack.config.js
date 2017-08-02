@@ -14,11 +14,7 @@ const config = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
